@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="330.0" prefWidth="429.0" spacing="10.0" style="-fx-background-color: black;" styleClass="root" BorderPane.alignment="CENTER">
+         <children>
+            <Label styleClass="header" text="Teclado Alfanúmerico">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <TextArea fx:id="txtArea" editable="false" minWidth="100.0" prefHeight="200.0" promptText="Datos recibidos" styleClass="text-area" wrapText="true" />
+            <Label styleClass="text" text="Comunicación mediante USART recibiendo datos de un keypad 4x4 configurado para soportar un teclado alfanúmerico." textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS" />
+            <Label styleClass="label" text="Introducción a los microcontroladores" />
+            <Label styleClass="label" text="IPN ESCOM 2021" />
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" styleClass="tool-bar" BorderPane.alignment="CENTER">
+         <items>
+            <Label minWidth="2.0" prefHeight="17.0" styleClass="label" text="Puerto:" />
+            <TextField fx:id="tf" styleClass="field" />
+            <Label minWidth="39.0" prefHeight="17.0" styleClass="label" text="Estado:" />
+            <ToggleButton fx:id="tb" minWidth="46.0" mnemonicParsing="false" onAction="#toggle" prefHeight="29.0" styleClass="toggle-button" text="Encender" />
+         </items>
+      </ToolBar>
+   </top>
+</BorderPane>
